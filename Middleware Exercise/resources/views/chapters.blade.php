@@ -1,91 +1,81 @@
-
 @extends('components.Layout')
 
-@section('title', 'HTML Roadmap - Chapters')
-
 @section('content')
-    
-    <div class="card-container">
-        <div class="card">
-            <div class="card-header">
-                <strong>Chapter 1. Introduction to HTML</strong>
-            </div>
-            <div class="card-body">
-                <p>Learn about the basic concepts of HTML, its purpose, and how it integrates with web technologies.</p>
-                <p>HTML is the backbone of web development. It allows you to create structured documents that browsers can render. This chapter covers the history of HTML and its evolution into HTML5.</p>
-            </div>
+<div id="gfg-nuj-chapters-div">
+    <div id="gfg-nuj-chapters-main-div" class="gfg-nuj-main-div">
+        <div id="gfg-nuj-chapters-heading-div">
+            <h2 id="gfg-nuj-chapters-heading">Chapters</h2>
+            <!-- <a id="gfg-nuj-chapters-heading-button" href="" target="_blank">view all</a> -->
         </div>
-
-        <div class="card">
-            <div class="card-header">
-                <strong>Chapter 2. Basic HTML Structure</strong>
+        <div id="gfg-nuj-chapters-content-div">
+            <div class="gfg-nuj-single-chapter-div chapter-0" onclick="handleChapterDownButtonClick(0)">
+                <div class="gfg-nuj-single-chapter-heading-div">
+                    <h3 class="gfg-nuj-single-chapter-title">HTML Basics</h3>
+                    <p class="gfg-nuj-single-chapter-icon-heading">
+                        <span class="gfg-nuj-single-chapter-icon gfg-nuj-single-chapter-icon-0">
+                            <span style="transform: rotate(-90deg);"><i class="gfg-nuj-single-chapter-symbol"></i></span>
+                        </span>
+                    </p>
+                </div>
+                <div class="gfg-nuj-single-chapter-extra-content-div gfg-nuj-single-chapter-extra-content-div-0" style="max-height: 0px;">
+                </div>
+                <div class="gfg-nuj-single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 279px;">
+                    <a href="https://www.geeksforgeeks.org/html-introduction/?ref=roadmap" class="gfg-nuj-single-track-div indexes-link" data-page-id="1">
+                        <p class="gfg-nuj-single-track-title">HTML Introduction</p>
+                    </a>
+                    <a href="https://www.geeksforgeeks.org/html-basics/?ref=roadmap" class="gfg-nuj-single-track-div indexes-link" data-page-id="1">
+                        <p class="gfg-nuj-single-track-title">HTML Basics</p>
+                    </a>
+                    <a href="https://www.geeksforgeeks.org/html-layout/?ref=roadmap" class="gfg-nuj-single-track-div indexes-link" data-page-id="1">
+                        <p class="gfg-nuj-single-track-title">HTML Layout</p>
+                    </a>
+                    <a href="https://www.geeksforgeeks.org/html-editors/?ref=roadmap" class="gfg-nuj-single-track-div indexes-link" data-page-id="1">
+                        <p class="gfg-nuj-single-track-title">HTML Editors</p>
+                    </a>
+                    <a href="https://www.geeksforgeeks.org/html-comments/?ref=roadmap" class="gfg-nuj-single-track-div indexes-link" data-page-id="1">
+                        <p class="gfg-nuj-single-track-title">HTML Comments</p>
+                    </a>
+                </div>
             </div>
-            <div class="card-body">
-                <p>Understand the structure of an HTML document, including the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags.</p>
-                <p>This chapter will guide you through the anatomy of an HTML page, emphasizing the importance of each section and how they interact with CSS and JavaScript.</p>
+            <!-- Add more chapter blocks as needed following the same structure -->
+            <div class="gfg-nuj-single-chapter-div chapter-1" onclick="handleChapterDownButtonClick(1)">
+                <div class="gfg-nuj-single-chapter-heading-div">
+                    <h3 class="gfg-nuj-single-chapter-title">HTML Basic Elements</h3>
+                    <p class="gfg-nuj-single-chapter-icon-heading">
+                        <span class="gfg-nuj-single-chapter-icon gfg-nuj-single-chapter-icon-1">
+                            <span><i class="gfg-nuj-single-chapter-symbol"></i></span>
+                        </span>
+                    </p>
+                </div>
+                <div class="gfg-nuj-single-chapter-extra-content-div gfg-nuj-single-chapter-extra-content-div-1">
+                </div>
+                <div class="gfg-nuj-single-chapter-hidden-div single-chapter-hidden-div-1">
+                    <a href="https://www.geeksforgeeks.org/html-heading/?ref=roadmap" class="gfg-nuj-single-track-div indexes-link" data-page-id="1">
+                        <p class="gfg-nuj-single-track-title">HTML Headings</p>
+                    </a>
+                    <a href="https://www.geeksforgeeks.org/html-paragraph/?ref=roadmap" class="gfg-nuj-single-track-div indexes-link" data-page-id="1">
+                        <p class="gfg-nuj-single-track-title">HTML Paragraphs</p>
+                    </a>
+                   
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <strong>Chapter 3. HTML Elements and Attributes</strong>
-            </div>
-            <div class="card-body">
-                <p>Explore various HTML elements such as headings, paragraphs, links, images, and how to use attributes to enhance them.</p>
-                <p>Learn about the most common elements and their attributes, including <code>href</code> for links, <code>src</code> for images, and how attributes affect the rendering and functionality of your elements.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <strong>Chapter 4. Forms and Input</strong>
-            </div>
-            <div class="card-body">
-                <p>Learn how to create forms for user input, including text fields, radio buttons, checkboxes, and submit buttons.</p>
-                <p>This chapter focuses on form creation and handling user input. You'll learn about the <code>&lt;form&gt;</code> element and various input types, as well as form validation and accessibility considerations.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <strong>Chapter 5. Multimedia in HTML</strong>
-            </div>
-            <div class="card-body">
-                <p>Discover how to embed images, audio, and video into your web pages using the appropriate HTML elements.</p>
-                <p>This chapter will cover the <code>&lt;img&gt;</code>, <code>&lt;audio&gt;</code>, and <code>&lt;video&gt;</code> tags, including attributes for controlling playback and ensuring compatibility across browsers.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <strong>Chapter 6. Semantic HTML</strong>
-            </div>
-            <div class="card-body">
-                <p>Understand the importance of semantic elements for better accessibility and SEO, including <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code>.</p>
-                <p>Learn how semantic HTML enhances the meaning of your content, making it more accessible to screen readers and search engines. This chapter includes best practices for structuring your HTML for maximum clarity and SEO benefits.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <strong>Chapter 7. HTML Best Practices</strong>
-            </div>
-            <div class="card-body">
-                <p>Learn best practices for writing clean and maintainable HTML code, including proper indentation, use of comments, and validation.</p>
-                <p>This chapter emphasizes the importance of writing readable code. You'll explore tools for validating HTML and ensuring your code adheres to web standards, which is crucial for cross-browser compatibility.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <strong>Chapter 8. HTML5 New Features</strong>
-            </div>
-            <div class="card-body">
-                <p>Explore new features introduced in HTML5, such as native video and audio support, the <code>&lt;canvas&gt;</code> element, and improved form controls.</p>
-                <p>This chapter introduces the latest HTML5 features that enhance user experience and interactivity. You'll learn how to implement these features in your projects effectively.</p>
-            </div>
+           
         </div>
     </div>
+</div>
 
-    <div class="navigation">
-        <a href="{{ url('/contact') }}" class="next-navigation">Next</a>
-    </div>
+<script>
+function handleChapterDownButtonClick(chapterIndex) {
+    const hiddenDiv = document.querySelector(`.single-chapter-hidden-div-${chapterIndex}`);
+    const extraContentDiv = document.querySelector(`.gfg-nuj-single-chapter-extra-content-div-${chapterIndex}`);
+
+    if (hiddenDiv.style.maxHeight === '0px') {
+        hiddenDiv.style.maxHeight = '500px'; 
+        extraContentDiv.style.maxHeight = 'none';
+    } else {
+        hiddenDiv.style.maxHeight = '0px';
+        extraContentDiv.style.maxHeight = '0px';
+    }
+}
+</script>
 @endsection
-
-

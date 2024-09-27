@@ -10,7 +10,6 @@
 
 <div class="container">
     <div class="form-box">
-        <h2>Enter Your Username</h2>
         <form action="{{ url('/user') }}" method="GET">
             <label for="username">Enter your username:</label>
             <input type="text" name="username" id="username" pattern="[A-Za-z]+" title="Only alphabetic characters are allowed" required >

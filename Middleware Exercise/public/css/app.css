@@ -6,7 +6,7 @@ html, body {
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(184, 244, 184);
+    background-color: rgb(6, 57, 54);
 }
 
 header {
@@ -25,15 +25,14 @@ header {
 
 h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: white;
 }
 
 h2 {
     font-size: 2rem;
-    color: #4CAF50;
+    color:black;
     margin-bottom: 10px;
 }
-
 
 ul.toc {
     list-style-type: none;
@@ -65,12 +64,12 @@ label {
 }
 
 textarea.input-box {
-    height: 150px;
+    height: 100 px;
     resize: none;
 }
 
 .submit-btn {
-    background-color: #4CAF50;
+    background-color: #0b4f44;
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
@@ -80,7 +79,7 @@ textarea.input-box {
 }
 
 .submit-btn:hover {
-    background-color: #45a049;
+    background-color: #186e61;
 }
 
 
@@ -112,14 +111,14 @@ textarea.input-box {
 .navbar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 8px 16px;
+    font-size: 1rem;
+    padding: 4px 8px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-    background-color: #45a049;
+    background-color: #4a9b94;
 }
 
 /* Footer styling */
@@ -127,7 +126,7 @@ textarea.input-box {
     background-color: #333;
     color: white;        
     text-align: center;  
-    padding: 15px 0;    
+    padding: 10px 0;    
     width: 100%;        
     margin-top: auto;      
 }
@@ -160,7 +159,7 @@ textarea.input-box {
 
 .next-button {
     display: inline-block;
-    background-color: #4CAF50; 
+    background-color: #277867; 
     color: white; 
     padding: 10px 20px;
     font-size: 1rem;
@@ -171,12 +170,12 @@ textarea.input-box {
 }
 
 .next-button:hover {
-    background-color: #45a049; 
+    background-color: #4c9d9d; 
 }
 
 .next-navigation {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #4cadaf;
     color: white; 
     padding: 10px 20px; 
     font-size: 1rem;
@@ -188,7 +187,7 @@ textarea.input-box {
 }
 
 .next-navigation:hover {
-    background-color: #45a049;
+    background-color: #0c3d3c;
 }
 
 .welcome-container {
@@ -203,14 +202,14 @@ textarea.input-box {
 }
 
 .welcome-image {
-    max-width: 10%;
+    max-width: 7%;
     height: auto;
     margin-right: 20px; 
     margin-bottom: 0px;
 }
 
 .welcome-text {
-    max-width: 50%;
+    max-width: 40%;
 }
 .header-container {
     display: flex; 
@@ -220,7 +219,7 @@ textarea.input-box {
 
 .username-container {
     text-align: center; 
-    margin: 20px 0; 
+    margin-top: 50px 0; 
 }
 
 .username-container h2 {
@@ -235,13 +234,13 @@ textarea.input-box {
 
 .username-container input {
     width: 250px; 
-    padding: 10px; 
+    padding: 5px; 
     border-radius: 5px;
     border: 1px solid #ccc; 
 }
 
 .username-container .submit-btn {
-    background-color: #4CAF50;
+    background-color: #0c3d32;
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
@@ -281,7 +280,7 @@ textarea.input-box {
 .form-box button {
     width: 100%; 
     padding: 10px;
-    background-color: #4CAF50; 
+    background-color: #076358; 
     color: white; 
     border: none; 
     border-radius: 5px; 
@@ -290,7 +289,7 @@ textarea.input-box {
 }
 
 .form-box button:hover {
-    background-color: #45a049; 
+    background-color: #0f534d; 
 }
 
 .link-container {
@@ -300,7 +299,7 @@ textarea.input-box {
 
 .button-link {
     display: inline-block; 
-    background-color: #4CAF50; 
+    background-color: #15866f; 
     color: white;
     padding: 10px 20px; 
     font-size: 1rem; 
@@ -312,7 +311,7 @@ textarea.input-box {
 }
 
 .button-link:hover {
-    background-color: #45a049; 
+    background-color: #45a08c; 
 }
 
 .welcome-box {
@@ -329,18 +328,18 @@ textarea.input-box {
 
 .welcome-box h1 {
     margin-bottom: 15px;
-    font-size: 2rem; 
+    font-size: 1rem; 
     color: #333; 
 }
 
 .welcome-box p {
-    font-size: 1.2rem; 
+    font-size: 1rem; 
     margin-bottom: 20px; 
     color: #555; 
 }
 
 .welcome-box .submit {
-    background-color: #4CAF50; 
+    background-color: #208d82; 
     color: white; 
     padding: 10px 20px;
     font-size: 1rem; 
@@ -350,56 +349,23 @@ textarea.input-box {
 }
 
 .welcome-box .submit:hover {
-    background-color: #45a049; 
+    background-color: #1f8988; 
 }
 
-.card-container {
+.card-container {   
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #1c2221c2;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin-top: 50px;
-}
-
-.card-header {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.card-body {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.next-navigation {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.next-navigation:hover {
-    background-color: #4CAF50;
-}
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px 0; 
-    margin-top: 40px;
+    margin: 30px 0; 
+    margin-top: 10px;
     margin-left: 15px;
     margin-right:15px;
 }
@@ -411,6 +377,90 @@ textarea.input-box {
 }
 
 .card-body {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 2rem;
+    background-color:whitesmoke ;
+    line-height: 1.1;
+}
+
+#gfg-nuj-chapters-div {
+    margin: 40px;
+}
+
+#gfg-nuj-chapters-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}   
+
+#gfg-nuj-chapters-main-div {
+    background-color: #0e4e45c2; 
+    border: 1px solid #087a78; 
+    border-radius: 8px; 
+    padding: 20px;
+}
+
+
+.gfg-nuj-single-chapter-div {
+    border-bottom: 1px solid #072e2f;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    margin-bottom: 10px; 
+}
+
+
+.gfg-nuj-single-chapter-div:hover {
+    background-color: #508e848b; 
+}
+
+
+.gfg-nuj-single-chapter-heading-div {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px; 
+}
+
+.gfg-nuj-single-chapter-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.gfg-nuj-single-chapter-icon-heading {
+    margin-right: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+
+.gfg-nuj-single-chapter-div:hover .gfg-nuj-single-chapter-icon-heading {
+    transform: rotate(90deg); 
+}
+
+
+.gfg-nuj-single-track-div {
+    text-decoration: none;
+    color: #7cafcf; 
+    padding: 8px; 
+}
+
+.gfg-nuj-single-track-div:hover {
+    text-decoration: underline; 
+    background-color: #7cafcf; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.gfg-nuj-single-chapter-hidden-div {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease;
+}
+
+.gfg-nuj-single-chapter-div:hover .gfg-nuj-single-chapter-hidden-div {
+    max-height: 100px; 
+}
+
+.gfg-nuj-single-chapter-hidden-content {
+    padding: 10px; 
+    background-color: #09a6a1; 
 }
