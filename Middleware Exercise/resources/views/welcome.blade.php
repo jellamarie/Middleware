@@ -15,14 +15,10 @@
             <input type="text" name="username" id="username" pattern="[A-Za-z]+" title="Only alphabetic characters are allowed" required >
             <br><br>
             <label for="username">Enter your age:</label>
-            <input type="text" name="username" id="username" pattern="[A-Za-z]+" title="Only alphabetic characters are allowed" required >
+            <input type="number" name="age" id="age" required min="1" max="100">
             <br><br>
             <button type="submit">Submit</button>
         </form>
-        <div class="link-container">
-            <p>or</p>
-            <a href="{{ url('/user') }}" class="button-link">Continue as Guest</a>
-        </div>
     </div>
 </div>
 

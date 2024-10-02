@@ -24,3 +24,17 @@ Route::get('/user', function () {
     }
     return view('user', ['username' => $username]);
 });
+
+Route::post('/CheckAge', [UserController::class, 'CheckAge'])->name('CheckAge');
+
+Route::get('/access-denied', function () {
+    return view('access-denied');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/restricted', function () {
+    return view('restricted');
+});

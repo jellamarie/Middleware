@@ -15,6 +15,17 @@ class CheckAge
      */
     public function handle(Request $request, Closure $next): Response
     {
+        $age = $request->input('age');
+
+    if ($age <= 17) {
+        return redirect('/access-denied'); // Redirect to access denied page
+    } elseif ($age >= 18 && $age <= 20) {
+        return redirect('/home'); // Redirect to homepage
+    } elseif ($age >= 21) {
+        return redirect('/restricted'); // Redirect to restricted page
+    }
+
         return $next($request);
     }
 }
+
