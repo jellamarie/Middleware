@@ -4,7 +4,8 @@ html, body {
     display: flex; 
     flex-direction: column; 
     font-family: Arial, sans-serif;
-    background-color: rgb(4, 60, 58);
+    background: url('/images/bg1.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
@@ -19,36 +20,45 @@ header {
     margin: 0 auto; 
     flex: 1; 
 }
-
+.header-roadmap-title {
+    margin-top: 80px;
+}
 h1 {
     font-size: 2.5rem;
-    color: black;
+    color: white;
+    margin-bottom: 10px;
+    width: 100%; 
+    box-sizing: border-box; 
+    
 }
 
 h2 {
     font-size: 2rem;
-    color: black;
+    color: white;
     margin-bottom: 10px;
 }
 
+
+
 ul.toc {
     list-style-type: none;
-    padding: 0;
+    padding: 10;
+
 }
 
 ul.toc li {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 label {
     display: block;
     font-size: 1.1rem;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 .input-box {
@@ -79,7 +89,7 @@ textarea.input-box {
 }
 
 .navbar {
-    background-color: #333;
+    background-color: #1b6b60c2;
     padding: 10px;
     text-align: right; 
     position: fixed;  
@@ -87,7 +97,7 @@ textarea.input-box {
     left: 0;        
     width: 100%;    
     z-index: 1000;   
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(82, 197, 217, 0.907);
 }
 
 .navbar ul {
@@ -112,15 +122,15 @@ textarea.input-box {
 }
 
 .navbar ul li a:hover {
-    background-color: #42a098;
+    background-color: #61bcb4;
 }
 
 /* Footer styling */
 .footer {
-    background-color: #333;
+    background-color: #0d5d5e;
     color: white;        
     text-align: center;  
-    padding: 10px 0;    
+    padding: 1px 0;    
     width: 100%;        
     margin-top: auto;      
 }
@@ -154,7 +164,7 @@ textarea.input-box {
 .next-navigation {
     display: inline-block;
     background-color: #b9e4db; 
-    color: white; 
+    color: rgb(85, 217, 229); 
     padding: 10px 20px;
     font-size: 1rem;
     border: none; 
@@ -179,12 +189,14 @@ textarea.input-box {
     max-width: 10%;
     height: auto;
     margin-right: 20px; 
+
     
     
 }
 
 .welcome-text {
     max-width: 40%;
+    color: white;
   
 }
 
@@ -201,6 +213,8 @@ textarea.input-box {
 .username-container h2 {
     font-size: 2rem; 
     margin-bottom: 15px; 
+    color: white;
+    
 }
 
 .username-container .form-group {
@@ -212,8 +226,8 @@ textarea.input-box {
     width: 250px; 
     padding: 5px; 
     border-radius: 5px;
-    border: 1px solid #ccc; 
-}
+    border: 2px solid white;
+ }
 
 .form-box {
     background-color: rgb(10, 61, 61); 
@@ -226,14 +240,14 @@ textarea.input-box {
 }
 
 .form-box h2 {
-    text-align: center; 
-    margin-bottom: 20px; 
-    background-color: white;
+    text-align:right;
+    margin-bottom: 50px; 
+  
 }
 
 .form-box label {
     display: block; 
-    margin-bottom: 3px; 
+    margin-bottom: 15px; 
 }
 
 .form-box input,
@@ -241,7 +255,7 @@ textarea.input-box {
     width: 95%; 
     padding: 9px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
 }
 
 .form-box button {
@@ -252,7 +266,7 @@ textarea.input-box {
 }
 
 .form-box button:hover {
-    background-color: #438f88; 
+    background-color: #076358; 
 }
 
 .link-container {
@@ -262,62 +276,64 @@ textarea.input-box {
 
 .button-link {
     display: inline-block; 
-    background-color: #095d4c; 
-    color: white;
+    background-color: #076358; 
+    color: rgb(231, 253, 247);
     padding:20px; 
     font-size: 1rem; 
     border: none; 
     border-radius: 5px; 
     text-decoration: none; 
     transition: background-color 0.3s ease; 
+    
+
 }
 
 .button-link:hover {
-    background-color: #198971; 
+    background-color: #159178; 
 }
 
 .card-container {   
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
-    gap: 100px; 
+    gap: 5px; 
 }
 
 .card {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(27, 107, 98);
     border: 1px solid #3e6962c2;
     border-radius: 8px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 25px; 
+    padding: 20px; 
 }
 
 .card-header {
     font-size: 1rem;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
    
 }
 
 .card-body {
     font-size: 1rem; 
     background-color: whitesmoke;
-    line-height: 1.4; 
+    line-height: 1.7; 
 }
 
 #gfg-nuj-chapters-div {
-    margin: 40px;
+    margin: 50px;
 }
 
 #gfg-nuj-chapters-heading {
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 #gfg-nuj-chapters-main-div {
     background-color: #1b6b60c2; 
     border: 1px solid #087a78; 
-    border-radius: 8px; 
-    padding: 20px;
+    border-radius: 30px; 
+    padding: 50px;
 }
 
 .gfg-nuj-single-chapter-div {
@@ -329,19 +345,19 @@ textarea.input-box {
 }
 
 .gfg-nuj-single-chapter-div:hover {
-    background-color: #508e848b; 
+    background-color: #70f0db8b; 
 }
 
 .gfg-nuj-single-chapter-heading-div {
     display: flex; 
     justify-content: space-between;
     align-items: center; 
-    padding: 10px; 
+    padding: 50px; 
 }
 
 .gfg-nuj-single-chapter-title {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 100;
 }
 
 .gfg-nuj-single-chapter-icon-heading {
@@ -355,13 +371,13 @@ textarea.input-box {
 
 .gfg-nuj-single-track-div {
     text-decoration: none;
-    color: #7cafcf; 
+    color: #5ab4eb; 
     padding: 8px; 
 }
 
 .gfg-nuj-single-track-div:hover {
     text-decoration: underline; 
-    background-color: #7cafcf; 
+    background-color: #5ab4eb; 
     transition: background-color 0.3s ease; 
 }
 
@@ -372,11 +388,11 @@ textarea.input-box {
 }
 
 .gfg-nuj-single-chapter-div:hover .gfg-nuj-single-chapter-hidden-div {
-    max-height: 100px; 
+    max-height: 50px; 
 }
 
 .gfg-nuj-single-chapter-hidden-div p {
-    margin: 20px 0; 
+    margin: 5px 0; 
 }
 #gfg-nuj-chapters-div {
     padding: 20px; 
@@ -384,7 +400,7 @@ textarea.input-box {
 
 .gfg-nuj-single-chapter-div {
     border: 1px solid #ccc;
-    border-radius: 5px; 
+    border-radius:  1px; 
     margin-bottom: 20px; 
     transition: box-shadow 0.3s ease; 
 }
@@ -428,6 +444,8 @@ textarea.input-box {
 .gfg-nuj-single-track-div:hover {
     text-decoration: underline; 
 }
+
+
 .contact-container {
     display: flex; 
     justify-content: center; 
@@ -435,35 +453,76 @@ textarea.input-box {
 }
 
 .card {
-    width: 100%; 
-    max-width: 600px;
-    margin: 20px auto; 
-    
-
+    width: 60%; 
+    max-width: 500px;
+    margin: 5% auto; /* Adjusted margin for better positioning */
+}
+.card-body{
+    background-color: #1b6b60c2;
 }
 
 .form-group {
     display: flex; 
     flex-direction: column; 
-    margin-bottom: 15px; 
+    margin-bottom: 10px; /* Adjusted margin for better spacing */
 }
 
 .input-box {
-    padding: 10px; 
-    border: 1px solid #ccc; 
-    width: 100%; 
+    padding: 8px; /* Increased padding for better UX */
+    border: 1px solid #000; /* Corrected border color */
+    width: 100%; /* Made input width responsive */
     box-sizing: border-box; 
 }
 
 .submit-btn {
     padding: 10px; 
-    background-color: #078572; 
+    background-color: #05262ec2; 
     color: white; 
     border: none; 
-    border-radius: 4px; 
+    border-radius: 10px; 
     cursor: pointer; 
 }
 
 .submit-btn:hover {
-    background-color: #078572; 
+    background-color: rgb(79, 158, 142); 
+}
+
+/* CSS for the welcome-box container */
+.welcome-box {
+    background-color: #226a80c2; /* Light blue background */
+    padding: 1px; /* Space inside the box */
+    border-radius: 20px; /* Rounded corners */
+    text-align: center; /* Center-align the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Style for the h1 element inside welcome-box */
+.welcome-box h1 {
+    font-size: 1 rem; /* Font size */
+    color: white; /* Text color */
+    margin-bottom:2%; /* Space below the heading */
+}
+
+/* Paragraph style inside welcome-box */
+.welcome-box p {
+    font-size: 1 rem; /* Font size */
+    color: white; /* Dark text color */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+/* Styling for the explore button */
+.welcome-box .submit {
+    background-color: #1e5460c2; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Space inside the button */
+    font-size: 1rem; /* Font size */
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for the explore button */
+.welcome-box .submit:hover {
+    background-color: #005bb5; /* Darker shade on hover */
 }

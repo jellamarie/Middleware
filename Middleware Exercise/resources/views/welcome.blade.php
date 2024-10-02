@@ -4,7 +4,7 @@
 
 @section('content')
 <header>
-    <h1>HTML Roadmap</h1>
+    <h1 class="header-roadmap-title">HTML Roadmap</h1>
     <img src="{{ asset('/images/html.png') }}" alt="Description of the image" class="welcome-image">
 </header>
 
@@ -16,9 +16,6 @@
             <br><br>
             <button type="submit">Submit</button>
         </form>
-
-        
-
         <div class="link-container">
             <p>or</p>
             <a href="{{ url('/user') }}" class="button-link">Continue as Guest</a>
