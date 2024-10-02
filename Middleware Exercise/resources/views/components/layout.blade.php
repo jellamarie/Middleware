@@ -11,7 +11,8 @@
     <header>    
         <nav class="navbar">
             <ul>
-                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/') }}"></a></li>
+                <li><a href="{{ url('/home') }}">Home</a></li>
                 <li><a href="{{ url('/chapters') }}">Chapters</a></li>
                 <li><a href="{{ url('/contact') }}">Contact Us</a></li>
             </ul>

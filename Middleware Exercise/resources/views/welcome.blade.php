@@ -14,6 +14,9 @@
             <label for="username">Enter your username:</label>
             <input type="text" name="username" id="username" pattern="[A-Za-z]+" title="Only alphabetic characters are allowed" required >
             <br><br>
+            <label for="username">Enter your age:</label>
+            <input type="text" name="username" id="username" pattern="[A-Za-z]+" title="Only alphabetic characters are allowed" required >
+            <br><br>
             <button type="submit">Submit</button>
         </form>
         <div class="link-container">
