@@ -7,7 +7,7 @@
     <div class="welcome-box">
         <h1>Welcome, {{ $username ? $username : 'Guest' }}</h1>
         <p>Enjoy exploring HTML!</p>
-        <button class="submit" onclick="location.href='{{ url('/home') }}'">Explore</button>
+        <button class="submit" onclick="location.href='{{ url('/chapters') }}'">Explore</button>
     </div>
 </div>
 @endsection

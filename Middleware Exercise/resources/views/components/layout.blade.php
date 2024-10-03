@@ -11,10 +11,8 @@
     <header>    
         <nav class="navbar">
             <ul>
-                <li><a href="{{ url('/') }}">Welcome</a></li>
-                <li><a href="{{ url('/access-denied') }}"></a></li>
-                <li><a href="{{ url('/restricted-area') }}"></a></li>
-                <li><a href="{{ url('/home') }}">Home</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/welcome') }}">Welcome</a></li>
                 <li><a href="{{ url('/chapters') }}">Chapters</a></li>
                 <li><a href="{{ url('/contact') }}">Contact Us</a></li>
             </ul>

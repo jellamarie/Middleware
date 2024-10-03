@@ -13,6 +13,8 @@
         Whether you're a beginner or looking to refine your web development skills,
         our site offers a collection of structured lectures designed to guide you through the fundamentals of HTML.
         Start your journey to building stunning websites with our easy-to-follow lessons and practical examples.</h3>
+
+        <button class="submit" onclick="location.href='{{ url('/welcome') }}'">Get Started</button>
 </div>
 @endsection
 
