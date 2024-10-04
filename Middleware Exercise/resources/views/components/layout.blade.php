@@ -11,8 +11,7 @@
     <header>    
         <nav class="navbar">
             <ul>
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="{{ url('/welcome') }}">Welcome</a></li>
+                <li><a href="{{ url('/welcome') }}">Sign Up</a></li>
                 <li><a href="{{ url('/chapters') }}">Chapters</a></li>
                 <li><a href="{{ url('/contact') }}">Contact Us</a></li>
             </ul>
@@ -22,9 +21,12 @@
     <main>
         @yield('content') 
     </main>
+    
+    @unless(View::hasSection('no_footer'))
+        <footer class="footer">
+            <p>&copy; 2024 HTML Roadmap. All rights reserved.</p>
+        </footer>
+    @endunless
 
-    <footer class="footer">
-        <p>&copy; 2024 HTML Roadmap. All rights reserved.</p>
-    </footer>
 </body>
 </html>

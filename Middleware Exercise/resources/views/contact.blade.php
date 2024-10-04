@@ -15,11 +15,14 @@
                     <label for="email">Email:</label>
                     <input type="email" class="input-box" id="email" name="email" required>
                 </div>
+                <br>
                 <div class="form-group">
                     <label for="message">Message:</label>
                     <textarea class="input-box" id="message" name="message" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <div class="submit-home">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
             </form>
         </div>
     </div>

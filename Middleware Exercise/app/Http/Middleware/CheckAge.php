@@ -3,29 +3,52 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Session;
 
 class CheckAge
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    public function handle(Request $request, Closure $next): Response
+    public function handle($request, Closure $next)
     {
-        $age = $request->input('age');
+        // Retrieve the age from the session
+        $age = Session::get('age');
+        $username = Session::get('username', 'Guest'); // Retrieve username from the session, default to 'Guest'
 
-    if ($age <= 17) {
-        return redirect('/access-denied'); // Redirect to access denied page
-    } elseif ($age >= 18 && $age <= 20) {
-        return redirect('/home'); // Redirect to homepage
-    } elseif ($age >= 21) {
-        return redirect('/restricted'); // Redirect to restricted page
-    }
+        // Check the age and set the verification status
+        if ($age < 18) {
+            // Log access denied
+            $logData = sprintf(
+                "[%s] Access Denied - Username: %s, Age: %d\n",
+                now()->toDateTimeString(),
+                $username,
+                $age
+            );
+            file_put_contents(storage_path('logs/log.txt'), $logData, FILE_APPEND);
+
+            return redirect('/access-denied');
+        } elseif ($age >= 21) {
+            Session::put('verificationStatus', 'Verified');
+
+            // Log access granted for 21 and above
+            $logData = sprintf(
+                "[%s] Access Granted - Username: %s, Age: %d, Status: Verified\n",
+                now()->toDateTimeString(),
+                $username,
+                $age
+            );
+            file_put_contents(storage_path('logs/log.txt'), $logData, FILE_APPEND);
+        } else {
+            Session::put('verificationStatus', 'Unverified');
+
+            // Log access granted for 18-20 with 'Unverified' status
+            $logData = sprintf(
+                "[%s] Access Granted - Username: %s, Age: %d, Status: Unverified\n",
+                now()->toDateTimeString(),
+                $username,
+                $age
+            );
+            file_put_contents(storage_path('logs/log.txt'), $logData, FILE_APPEND);
+        }
 
         return $next($request);
     }
-}
-
+}                                                       

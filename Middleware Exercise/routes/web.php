@@ -31,9 +31,7 @@ Route::get('/access-denied', function () {
     return view('access-denied');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+
 
 Route::get('/restricted', function () {
     return view('restricted');

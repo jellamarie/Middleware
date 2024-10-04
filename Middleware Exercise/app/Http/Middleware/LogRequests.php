@@ -5,20 +5,26 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Symfony\Component\HttpFoundation\Response;
 
 class LogRequests
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
-        Log::info('LogRequests middleware executed'); // Log a simple message
-        $logData = '[' . now() . '] ' . $request->method() . ' ' . $request->fullUrl();
-        Log::channel('custom')->info($logData);
+        $logData = sprintf(
+            "[%s] %s %s\n",
+            now(),
+            $request->method(),
+            $request->fullUrl()
+        );
+
+        file_put_contents(storage_path('logs/log.txt'), $logData, FILE_APPEND);
 
         return $next($request);
     }
