@@ -6,7 +6,28 @@ html, body {
     font-family: Arial, sans-serif;
     background: url('/images/bg1.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white; /* Set all text to white by default */
+    color: white; /* Set all text to white by default */}
+
+    .introduction{
+        padding: 22px;
+    
+      }
+      .sign-in-button{
+    background-color: #076358;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 19%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid;
+    text-align: center;
+      }
+
+      .introduction-image{
+        max-width: 9%;
+        height: auto;
+        margin-right: 20px;
 }
 header {
     color: white;

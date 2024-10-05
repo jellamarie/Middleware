@@ -1,29 +1,40 @@
-
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
+// Home route
 Route::get('/', function () {
     return view('home');
 });
+
+// Welcome route
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+// Chapters route
 Route::get('/chapters', function () {
     return view('chapters');
 });
+
+// Contact route
 Route::get('/contact', function () {
-    return view('contact'); 
+    return view('contact');
 });
 
+// User route
 Route::get('/user', function () {
     $username = request()->input('username', 'Guest');
 
     if (!preg_match('/^[A-Za-z]+$/', $username)) {
         $username = 'Guest'; 
     }
+
     return view('user', ['username' => $username]);
 });
+
 // Storing username and age in the session (example route)
 Route::post('/store-user', function (Request $request) {
     $request->validate([
@@ -38,15 +49,12 @@ Route::post('/store-user', function (Request $request) {
     return redirect('/restricted'); // Redirect to a route that uses CheckAge middleware
 });
 
-Route::post('/CheckAge', [UserController::class, 'CheckAge'])->name('CheckAge');
-
+// Route for access denied page
 Route::get('/access-denied', function () {
     return view('access-denied');
 });
 
-
-
+// Restricted page protected by CheckAge middleware
 Route::get('/restricted', function () {
     return view('restricted');
 })->middleware('checkAge');
-
