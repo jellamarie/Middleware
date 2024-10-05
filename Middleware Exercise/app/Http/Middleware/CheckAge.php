@@ -1,6 +1,6 @@
-<?php
+CHECKAGE
 
-namespace App\Http\Middleware;
+<?php
 
 use Closure;
 use Illuminate\Support\Facades\Session;
@@ -51,4 +51,4 @@ class CheckAge
 
         return $next($request);
     }
-}                                                       
+}

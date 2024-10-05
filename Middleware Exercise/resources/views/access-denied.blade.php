@@ -1,3 +1,5 @@
+ACCESS DENIED
+
 @extends('Components.layout')
 
 @php
@@ -29,3 +31,5 @@
         <p>You must be at least 18 years old to access this content.</p>
     </div>
 @endsection
+    
+www.w3.org

@@ -1,43 +1,23 @@
 @extends('components.Layout')
 
- HEAD
-@section('title', 'HTML Roadmap - Contact Us')
+@section('title', 'HTML Roadmap - Home')
 
 @section('content')
-<div class="container contact-container">
-    <div class="card">
-        <div class="card-header">
-            <h2>Contact Us</h2>
-        </div>
-        <div class="card-body">
-            <form action="{{ url('/submit-contact') }}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="input-box" id="email" name="email" required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea class="input-box" id="message" name="message" required></textarea>
-                </div>
-                <div class="submit-home">
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </div>
-            </form>
+<div class="container home-container">
+    <header>
+        <h1 class="header-roadmap-title">Welcome to the HTML Roadmap</h1>
+        <img src="{{ asset('/images/html.png') }}" alt="HTML Introduction Image" class="welcome-image">
+    </header>
+    <div class="introduction">
+        <p>
+            HTML, or HyperText Markup Language, is the standard language for creating webpages. 
+            It helps structure content on the web and is one of the core technologies used to build websites.
+        </p>
+        <div class="sign-in-button">
+            <a href="{{ url('/welcome') }}" class="btn btn-primary">Sign In</a>
         </div>
     </div>
 </div>
-@section('title', 'HTML Roadmap - Welcome')
-
-@section('content')
-<header>
-    <h1 class="header-roadmap-title">HTML Roadmap</h1>
-    <img src="{{ asset('/images/html.png') }}" alt="Description of the image" class="welcome-image">
-</header>
-
-
+@endsection
 
 @section('no_footer', true)
- 2513c47191c9eb566b7ce99959f1d5742b86477e
-@endsection

@@ -10,7 +10,7 @@ html, body {
 }
 header {
     color: white;
-    padding: 10px;
+    padding:5px;
     text-align: center;
 }
 
@@ -222,7 +222,7 @@ textarea.input-box {
 }
 
 .welcome-image {
-    max-width: 10%;
+    max-width: 9%;
     height: auto;
     margin-right: 20px; 
 

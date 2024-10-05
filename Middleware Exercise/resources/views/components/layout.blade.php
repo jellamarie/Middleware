@@ -22,6 +22,7 @@
         @yield('content') 
     </main>
     
+    
     @unless(View::hasSection('no_footer'))
         <footer class="footer">
             <p>&copy; 2024 HTML Roadmap. All rights reserved.</p>
