@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
-class LogRequests
+class LogRequests   
 {
     /**
      * Handle an incoming request.
