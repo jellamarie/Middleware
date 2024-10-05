@@ -1,6 +1,6 @@
-CHECKAGE
-
 <?php
+
+namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Session;
@@ -13,7 +13,13 @@ class CheckAge
         $age = Session::get('age');
         $username = Session::get('username', 'Guest'); // Retrieve username from the session, default to 'Guest'
 
-        // Check the age and set the verification status
+        // Check if age is not set or invalid
+        if (is_null($age) || !is_numeric($age)) {
+            // Redirect to access-denied if age is not set or invalid
+            return redirect('/access-denied');
+        }
+
+        // Check if age is less than 18
         if ($age < 18) {
             // Log access denied
             $logData = sprintf(
@@ -26,6 +32,7 @@ class CheckAge
 
             return redirect('/access-denied');
         } elseif ($age >= 21) {
+            // User is verified for age 21+
             Session::put('verificationStatus', 'Verified');
 
             // Log access granted for 21 and above
@@ -37,6 +44,7 @@ class CheckAge
             );
             file_put_contents(storage_path('logs/log.txt'), $logData, FILE_APPEND);
         } else {
+            // Age is between 18 and 20
             Session::put('verificationStatus', 'Unverified');
 
             // Log access granted for 18-20 with 'Unverified' status
