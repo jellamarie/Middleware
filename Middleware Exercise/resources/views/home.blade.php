@@ -1,5 +1,6 @@
 @extends('components.Layout')
 
+ HEAD
 @section('title', 'HTML Roadmap - Contact Us')
 
 @section('content')
@@ -27,4 +28,16 @@
         </div>
     </div>
 </div>
+@section('title', 'HTML Roadmap - Welcome')
+
+@section('content')
+<header>
+    <h1 class="header-roadmap-title">HTML Roadmap</h1>
+    <img src="{{ asset('/images/html.png') }}" alt="Description of the image" class="welcome-image">
+</header>
+
+
+
+@section('no_footer', true)
+ 2513c47191c9eb566b7ce99959f1d5742b86477e
 @endsection
