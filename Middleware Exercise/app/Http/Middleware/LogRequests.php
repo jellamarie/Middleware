@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class LogRequests
 {
+    
     public function handle(Request $request, Closure $next): Response
     {
         // Prepare log data with timestamp, HTTP method, and full URL

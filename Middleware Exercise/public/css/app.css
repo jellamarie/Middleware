@@ -8,27 +8,21 @@ html, body {
     background-size: cover;
     color: white; /* Set all text to white by default */}
 
-    .introduction{
-        padding: 22px;
-    
-      }
-      .sign-in-button{
+.introduction{
+    padding: 10px;
+    text-justify: auto;        text-align: center;
+}
+.sign-in-button{
     background-color: #076358;
     color: white;
     cursor: pointer;
     margin-top: 10px;
-    width: 19%;
+    width: 18%;
     padding: 6px;
     border-radius: 5px;
     border: 1px solid;
     text-align: center;
       }
-
-      .introduction-image{
-        max-width: 9%;
-        height: auto;
-        margin-right: 20px;
-}
 header {
     color: white;
     padding:5px;
@@ -36,16 +30,18 @@ header {
 }
 
 .container {
-    padding: 20px;
+    padding: 5px;
     max-width: 500px;
     margin: 0 auto; 
     flex: 1; 
     
+    
 }
 
 .header-roadmap-title {
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 2px;
+    padding: 100x;
 }
 h1 {
     font-size: 2.5rem;
@@ -243,12 +239,9 @@ textarea.input-box {
 }
 
 .welcome-image {
-    max-width: 9%;
+  max-width: 9%;
     height: auto;
-    margin-right: 20px; 
-
-    
-    
+    margin-right: 20px;     
 }
 
 .welcome-text {

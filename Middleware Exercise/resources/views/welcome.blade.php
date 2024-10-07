@@ -5,7 +5,7 @@
 @section('content')
 <header>
     <h1 class="header-roadmap-title">HTML Roadmap</h1>
-    <img src="{{ asset('/images/html.png') }}" alt="Description of the image" class="welcome-image">
+    <img src="{{ asset('/images/html.png') }}" alt="Description of the image" class="welcome-image welcome-roadmap-image">
 </header>
 
 <div class="container">
