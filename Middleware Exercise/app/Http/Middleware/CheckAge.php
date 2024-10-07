@@ -3,60 +3,39 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Http\Request;
 
 class CheckAge
 {
-    public function handle($request, Closure $next)
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle(Request $request, Closure $next)
     {
-        // Retrieve the age from the session
-        $age = Session::get('age');
-        $username = Session::get('username', 'Guest'); // Retrieve username from the session, default to 'Guest'
+        $age = session('age');  // Retrieve age from session
 
-        // Check if age is not set or invalid
-        if (is_null($age) || !is_numeric($age)) {
-            // Redirect to access-denied if age is not set or invalid
-            return redirect('/access-denied');
+        // If age is not set, redirect to welcome to input age
+        if (is_null($age)) {
+            return redirect('/welcome');
         }
 
-        // Check if age is less than 18
+        // Redirect based on age
         if ($age < 18) {
-            // Log access denied
-            $logData = sprintf(
-                "[%s] Access Denied - Username: %s, Age: %d\n",
-                now()->toDateTimeString(),
-                $username,
-                $age
-            );
-            file_put_contents(storage_path('logs/log.txt'), $logData, FILE_APPEND);
-
             return redirect('/access-denied');
         } elseif ($age >= 21) {
-            // User is verified for age 21+
-            Session::put('verificationStatus', 'Verified');
-
-            // Log access granted for 21 and above
-            $logData = sprintf(
-                "[%s] Access Granted - Username: %s, Age: %d, Status: Verified\n",
-                now()->toDateTimeString(),
-                $username,
-                $age
-            );
-            file_put_contents(storage_path('logs/log.txt'), $logData, FILE_APPEND);
-        } else {
-            // Age is between 18 and 20
-            Session::put('verificationStatus', 'Unverified');
-
-            // Log access granted for 18-20 with 'Unverified' status
-            $logData = sprintf(
-                "[%s] Access Granted - Username: %s, Age: %d, Status: Unverified\n",
-                now()->toDateTimeString(),
-                $username,
-                $age
-            );
-            file_put_contents(storage_path('logs/log.txt'), $logData, FILE_APPEND);
+            // Check if user has already visited the restricted area
+            if (!session('visited_restricted_area')) {
+                // Set session variable to prevent future redirects to restricted-area
+                session(['visited_restricted_area' => true]);
+                return redirect('/restricted-area');
+            }
         }
 
+        // If age is 18-20, allow access to the requested page
         return $next($request);
     }
 }

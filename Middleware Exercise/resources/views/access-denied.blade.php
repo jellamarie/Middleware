@@ -3,7 +3,7 @@ ACCESS DENIED
 @extends('Components.layout')
 
 @php
-    $title = 'Access Denied';
+    $title = 'Restricted Area';
 @endphp
 
 @push('styles')
@@ -32,4 +32,3 @@ ACCESS DENIED
     </div>
 @endsection
     
-www.w3.org

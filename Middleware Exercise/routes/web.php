@@ -2,62 +2,55 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+use App\Http\Middleware\CheckAge;
 
-
-Route::middleware(['log.requests'])->group(function () {
+// Unrestricted Home Route
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
-// Welcome route
+// Welcome route for age submission
 Route::get('/welcome', function () {
     return view('welcome');
-});
+})->name('welcome');
 
-// Chapters route
-Route::get('/chapters', function () {
-    return view('chapters');
-});
+// Restricted area route (21+)
+Route::get('/restricted-area', function () {
+    return view('restricted-area');
+})->name('restricted.area');
 
-// Contact route
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Access Denied route for underage users
+Route::get('/access-denied', function () {
+    return view('access-denied');
+})->name('access.denied');
 
-// User route
-Route::get('/user', function () {
-    $username = request()->input('username', 'Guest');
-
-    if (!preg_match('/^[A-Za-z]+$/', $username)) {
-        $username = 'Guest'; 
-    }
-
-    return view('user', ['username' => $username]);
-});
-
-// Storing username and age in the session (example route)
-Route::post('/store-user', function (Request $request) {
+// Route to handle age submission and redirect based on age
+Route::post('/store-age', function (Request $request) {
     $request->validate([
-        'username' => 'required|string',
         'age' => 'required|integer|min:1|max:120',
     ]);
 
-    // Store data in the session
-    Session::put('username', $request->input('username'));
-    Session::put('age', $request->input('age'));
+    // Store the user's age in session
+    session(['age' => $request->input('age')]);
+    $age = $request->input('age');
 
-    return redirect('/restricted'); // Redirect to a route that uses CheckAge middleware
-});
+    // Redirect based on age
+    if ($age < 18) {
+        return redirect()->route('access.denied');
+    } elseif ($age >= 21) {
+        return redirect()->route('restricted.area');
+    } else {
+        return redirect()->route('chapters');
+    }
+})->name('store.age');
 
-// Route for access denied page
-Route::get('/access-denied', function () {
-    return view('access-denied');
-});
+// Protected Routes Group - Only accessible if CheckAge allows
+Route::middleware([CheckAge::class])->group(function () {
+    Route::get('/chapters', function () {
+        return view('chapters');
+    })->name('chapters');
 
-// Restricted page protected by CheckAge middleware
-Route::get('/restricted', function () {
-    return view('restricted');
-})->middleware('checkAge');
-
+    Route::get('/contact', function () {
+        return view('contact');
+    })->name('contact');
 });

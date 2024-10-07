@@ -13,17 +13,22 @@
         <form action="{{ url('/user') }}" method="GET">
             <label for="username">Enter your username:</label>
             <input type="text" name="username" id="username" pattern="[A-Za-z]+" title="Only alphabetic characters are allowed" required>
-            <br><br>
-            <label for="age">Enter your age:</label>
-            <input type="number" name="age" id="age" required min="1" max="100">
-            <br><br>
-            <div class="submit-home">
-                <button type="submit">Submit</button>  
-            </div>
         </form>
+            <br><br>
+        <form action="{{ route('store.age') }}" method="POST">
+        @csrf
+            <label for="age">Enter your age:</label>
+            <input type="text" name="age"  id="age" required min="1" max="100">
+            <div class="submit-home">
+            <button type="submit">Submit</button>  
+            </div>
+</form>
+            
+       
     </div>
 </div>
 
 @section('no_footer', true)
 
 @endsection
+
