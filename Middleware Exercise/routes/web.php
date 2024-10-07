@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-// Home route
+
+Route::middleware(['log.requests'])->group(function () {
 Route::get('/', function () {
     return view('home');
 });
@@ -58,3 +59,5 @@ Route::get('/access-denied', function () {
 Route::get('/restricted', function () {
     return view('restricted');
 })->middleware('checkAge');
+
+});

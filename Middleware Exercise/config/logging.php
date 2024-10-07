@@ -49,6 +49,9 @@ return [
     |                    "errorlog", "monolog", "custom", "stack"
     |
     */
+    'channels' => [
+        // other channels...
+    ],
 
     'channels' => [
 
@@ -71,6 +74,12 @@ return [
             'level' => env('LOG_LEVEL', 'debug'),
             'days' => env('LOG_DAILY_DAYS', 14),
             'replace_placeholders' => true,
+        ],
+        
+        'custom' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/log.txt'),
+            'level' => 'info',
         ],
 
         'slack' => [
@@ -127,12 +136,6 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
-        // Add this part for the custom log channel
-        'custom' => [
-            'driver' => 'single',
-            'path' => storage_path('logs/log.txt'),
-            'level' => 'info',
-        ],
     ],
 
 ];
