@@ -618,3 +618,21 @@ body.contact {
 .welcome-box .submit:hover {
     background-color: #005bb5; /* Darker shade on hover */
 }
+
+.redirect-button {
+    background-color: #076358;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 9%;
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid;
+    text-align: center;
+    text-decoration: none; /* Ensure the link doesn't have underline */
+    display: inline-block; /* Make it behave like a button */
+}
+
+.redirect-button:hover {
+    background-color:#076358; /* Darker green on hover */
+}
