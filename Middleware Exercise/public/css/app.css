@@ -88,7 +88,16 @@ h4 {
 }
 
 .submit-home{
+    
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
     text-align: center;
+    text-decoration: none; /* Ensure the link doesn't have underline */
+    display: inline-block; /* Make it behave like a button */
 }
 
 ul.toc {
@@ -625,7 +634,7 @@ body.contact {
     cursor: pointer;
     margin-top: 10px;
     width: 9%;
-    padding: 9px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid;
     text-align: center;
@@ -635,4 +644,13 @@ body.contact {
 
 .redirect-button:hover {
     background-color:#076358; /* Darker green on hover */
+}
+.center-container{
+    width: 30%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-family: Poppins;
+    text-align: center;  
 }
